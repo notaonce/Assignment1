@@ -1,18 +1,19 @@
 * {
     margin: auto;
     box-sizing: border-box;
-    background: whitesmoke;
-
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-
+body {
+    background: whitesmoke;
+}
 
 .headline {
     font-family: 'Black Han Sans', sans-serif;
     font-size: 40px;
     background-color: #00a495;
     color: white;
-    font-weight: 200;
+    font-weight: 100;
     text-align: center;
     z-index: 10;
     position: fixed;
@@ -25,7 +26,8 @@
     text-align: center;
     position: relative;
     padding-top: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
     min-width: 420px;
     border: 1px solid #ddd;
     z-index: 8;
@@ -38,8 +40,8 @@
     height: 400px;
     overflow: hidden;
     text-align: center;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
     border-bottom: 1px solid #ddd;
 }
 
@@ -47,28 +49,70 @@
     font-family: 'Noto Sans KR', serif;
     background: #00a495;
     color: white;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #fff;
     width: 400px;
     min-width: auto;
 }
 
 img {
-    max-width: auto;
-    max-height: 105%;
     overflow: hidden;
     background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
-.summary {
+.article-head {
     font-family: 'Noto Sans KR', sans-serif;
     background: rgb(0, 0, 0, 0);
-    position: relative;
     top: 50px;
     left: 10%;
     padding: 0%;
-    margin: 0%;
+    margin: 40px auto;
     font-weight: 700;
     text-align: left;
     border-bottom: 1px solid #ddd;
     width: 80%;
+    font-size: 30px;
+}
+
+.table {
+    display: flex;
+    width: 400px;
+    background: white;
+    
+}
+
+.table-left {
+    flex: 3;
+
+}
+
+.table-right {
+    flex: 7;
+}
+
+.left {
+    font-weight: 700;    
+    border: 1px solid #fff;
+    border-top: 0;
+    height: auto;
+    padding: 4px 0;
+    background: #ddd;
+}
+
+
+.right {
+    font-weight: 400;    
+    border-bottom: 1px solid #ddd;
+    height: auto;
+    padding: 4px 0;
+}
+
+.right:last-child {
+    border-bottom: 0;
+}
+
+article {
+    width: 80%;
+    text-align: justify;
 }
