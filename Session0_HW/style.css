@@ -1,0 +1,73 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+    background: whitesmoke;
+
+}
+
+
+
+.headline {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 40px;
+    background-color: #00a495;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container{
+    width: 75%;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    min-width: 420px;
+    border: 1px solid #ddd;
+    z-index: 8;
+    background: #fff;
+
+}
+
+.imgcontainer {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#name {
+    font-family: 'Noto Sans KR', serif;
+    background: #00a495;
+    color: white;
+    border-bottom: 1px solid #ddd;
+    width: 400px;
+    min-width: auto;
+}
+
+img {
+    max-width: auto;
+    max-height: 105%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.summary {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: rgb(0, 0, 0, 0);
+    position: relative;
+    top: 50px;
+    left: 10%;
+    padding: 0%;
+    margin: 0%;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
