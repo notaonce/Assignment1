@@ -1,0 +1,142 @@
+* {
+    box-sizing: borbox;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 375px;
+    height: 735px;
+}
+
+
+.container_profile {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    margin-bottom: 15px;
+}
+
+.nickname {
+    text-align: center;
+    width: 375px;
+    height: 42px;
+    margin: 0 0;
+    font-weight: 500;
+}
+
+.container_profile_undernick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 375px;
+    margin-bottom: 20px;
+}
+
+.container_value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 239px;
+    justify-content: center;
+
+}
+
+.photo_profile {
+    width: 96px;
+    height: 96px;
+    margin: 0px 20px;
+}
+
+.photo_profile img {
+    width: 96px;
+    height: 96px;
+}
+
+.value {
+    text-align: center;
+    margin: 0px 20px;
+    font-size: smaller;
+    font-weight: 500;
+}
+
+#num {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.introduce {
+    margin: 0px 20px;
+    width: auto;
+    height: 100px;
+    font-size: small;
+}
+
+h4 {
+    margin: 10px 0px;
+}
+
+.edit_profile_button {
+    text-align: center;
+    width: 342px;
+    height: 30px;
+    border: 1px solid #DBDBDB;
+    margin: 0px 17.5px;
+    border-radius: 5px;
+    padding: 3px 0;
+    background-color: #fff;
+}
+
+.choose_icon {
+    display: flex;
+}
+
+.container_icon {
+    height: 30px;
+    width: 30px;
+    padding: 10px 78.75px;
+}
+
+.container_icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#underbar {
+    border-bottom: 1px solid #000000;
+}
+
+.container_photo {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.item_photo {
+    width: 123px;
+    height: 123px;
+    border: 1px solid white;
+    border-top: 0px;
+    border-right: 0px;
+    overflow: hidden;    
+    position: relative;
+}
+
+.item_photo img {
+    height: 100%;
+    width: auto;    
+    position: absolute; /* 이미지 위치 조정을 위해 절대 위치로 변경 */
+    left: 50%; /* 이미지를 영역 너비의 50% 만큼 오른쪽으로 이동 */
+    transform: translateX(-50%); /* 이미지를 이미지 크기의 50% 만큼 왼쪽으로 이동 */
+}
+
+.container_underbaricon {
+    position: fixed;
+    top: 690px;
+    background-color: #fff;
+    display: flex;
+    width: 375px;
+    padding: 10px 0px;
+    justify-content: space-around;
+    z-index: 10;
+}
