@@ -1,0 +1,24 @@
+wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+    }
+
+h1 {
+    font-size: 15vh;
+    font-family: 'Song Myung', serif;
+}
+
+textarea {
+    font-size: large;
+    font-family: 'Song Myung', serif;
+
+}
+
+.submit {
+    margin-left: 12vw;
+    width: 22vw;
+    padding: 5vh 0vw;
+}

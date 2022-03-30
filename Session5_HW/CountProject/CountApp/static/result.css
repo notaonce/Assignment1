@@ -1,0 +1,17 @@
+wrapper {
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    color : black;
+    font-family: 'Song Myung', serif;
+}
+
+.text {
+    width : 60vw;
+    height : auto;
+    border: 1px soild black;
+}
