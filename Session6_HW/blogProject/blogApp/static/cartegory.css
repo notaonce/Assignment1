@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container div {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    width: 200px;
+}
+
+.container div a {
+
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Song Myung', serif;
+    color: black;
+}
+
+a:visited { 
+    color: black; text-decoration: none;
+} 
+
+a:hover { color: gray; text-decoration: none;}
+

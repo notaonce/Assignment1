@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Song+Myung&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="article">
+            <div id="article_title"> {{ article.title }} </div>
+            <div id="article_date"> {{ article.date }}</div>
+            <div id="article_content"> {{ article.content }} </div>
+        </div>
+        <a href="{% url 'list' %}">전체 글 목록</a>
+    </div>
+</body>
+</html>

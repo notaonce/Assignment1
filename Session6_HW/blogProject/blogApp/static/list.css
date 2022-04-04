@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Song Myung', serif;
+}
+
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+a:visited { 
+    color: black; text-decoration: none;
+} 
+
+a:hover { color: gray; text-decoration: none;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 24px;
+}
+     

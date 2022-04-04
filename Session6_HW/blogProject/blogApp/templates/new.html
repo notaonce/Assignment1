@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Song+Myung&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>흔적 남기기</h1>
+        <form action="/new" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="title" placeholder="제목" style="width:30vw;height:30px;font-size:20px;font-family: 'Nanum Gothic', sans-serif;" />
+            </div>
+            <div>
+                <textarea name="content" placeholder="내용" cols="50" rows="20" style="font-size:14px;font-family: 'Nanum Gothic', sans-serif;""></textarea>
+            </div>
+            <div>
+                <select name="cartegory" >
+                <option value="hobby" selected="selected">취미</option>
+                <option value="food">음식</option>
+                <option value="programming">프로그래밍</option>
+                </select>
+            </div>
+            <button type="submit">작성 완료</button>
+        </form>
+    </div>
+</body>
+</html>
