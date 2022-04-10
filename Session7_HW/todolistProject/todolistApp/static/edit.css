@@ -1,0 +1,85 @@
+body {
+    margin : 0px;
+    padding : 0px;
+    background-color: #06113C;
+}
+
+a {
+    text-decoration: none;
+    color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    font-size: 30px;
+}
+
+h1 {
+    color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+
+}
+a:visited { 
+    color: #EEEEEE; text-decoration: none;
+} 
+
+a:hover { color: #FF8C32; text-decoration: none;}
+
+input[type=text] {
+    border:none;
+    width: 40vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+    background-color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+
+textarea {
+    border: none;
+    width : 40vw;
+    height : 30vh;
+    margin-bottom: 2vh;
+    background-color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type=date] {
+    width : 30vw;
+    height : 5vh;
+    margin-bottom: 5vh;
+    background-color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+
+}
+
+button[type=submit] {
+    width : 30vw;
+    height : 5vh;
+    margin-bottom: 5vh;
+    background-color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+}
+
+button:hover {
+    background-color: #FF8C32;
+    color: #EEEEEE;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin : 5vh auto;
+    text-align: center;
+}

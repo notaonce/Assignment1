@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div id="title"> 
+            {{ post.title }}
+        </div>
+        <div id="date">
+            작성일자 : {{ post.date }}
+        </div>        
+        <div id="detail">
+            {{ post.detail }}
+        </div>
+
+        <div id="d_day">
+            {{ post.d_day }} 까지
+        </div>
+        <div class="button">
+            <div>
+                <a href="{% url 'edit' post.pk %}">수정</a>
+            </div>
+            <div>
+                <a href="{% url 'delete' post.pk%}">삭제</a>
+            </div>    
+            <div>
+                <a href="{% url 'home' %}">홈으로</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

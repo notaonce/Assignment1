@@ -1,0 +1,31 @@
+body {
+    margin : 0px;
+    padding : 0px;
+    background-color: #06113C;
+}
+
+a {
+    text-decoration: none;
+    color: #EEEEEE;
+    font-family: 'Hahmlet', serif;
+    font-size: 48px;
+}
+
+a:visited { 
+    color: #EEEEEE; text-decoration: none;
+} 
+
+a:hover { color: #FF8C32; text-decoration: none;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#header {
+    font-size: 86px;
+    font-family: 'Hahmlet', serif;
+    color : white;
+}
