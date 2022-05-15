@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block title %}
+멋사투나잇
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">    
+    {% csrf_token %}
+    <div>
+        <input type="text" id="title" name="title" value={{post.title}}>
+    </div>
+    <div>
+        <textarea name="content" id="content">{{post.content}}</textarea>
+    </div>
+    <div>
+        <button type="submit">수정 완료</input> 
+    </div>
+    <div>
+        <a href="{% url 'home' %}">홈으로</a>
+    </div>
+</form>
+{% endblock %}

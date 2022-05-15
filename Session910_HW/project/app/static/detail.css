@@ -1,0 +1,75 @@
+#post_title {
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: bolder;
+    font-size: 42px;
+    border-bottom: 2px solid rgb(57, 62, 70);
+}
+
+#post_date {
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 5vh;
+}
+
+#post_content {
+    padding-bottom: 5vh;
+}
+
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5vh;
+    border-bottom: 2px solid rgb(57, 62, 70);
+    background-color: rgb(57, 62, 70);
+}
+
+.button_container a {
+    padding : 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #EEEEEE;
+}
+
+.delete_comment{
+    padding : 0px 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(34, 40, 49) ;
+}
+
+
+a:visited { 
+    color: #EEEEEE;
+    text-decoration: none;
+} 
+
+a:hover { color: rgb(0, 173, 181); text-decoration: none;}
+
+.comment {
+    margin-bottom: 5px;
+    border-bottom: 2px solid rgb(57, 62, 70);
+}
+form {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+input {
+    width: 50vw;
+    height: 10vh;
+}
+
+button {
+    height : 8vh;
+    width:10vw;
+    border-radius: 10px;
+    border: 2px solid rgb(57, 62, 70);
+}
+
+button:hover{
+    background-color: rgb(0, 173, 181);
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+}

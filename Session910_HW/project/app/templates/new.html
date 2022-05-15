@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+
+{% endblock %}
+
+{% block title %}
+작성하기
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">    
+    {% csrf_token %}
+    <div>
+        <input type="text" id="title" name="title" placeholder="제목">
+    </div>
+    <div>
+        <textarea name="content" id="content" placeholder="세부사항"></textarea>
+    </div>
+    <div>
+        <button type="submit">작성 완료</input> 
+    </div>
+</form>    
+<a href="{% url 'home' %}">홈으로</a>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+div .button_container {
+    margin : 5vh auto 3vh ;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+body .post_title {
+    padding : 5px 0;
+    border-bottom: 2px solid  rgb(57, 62, 70);
+}
+a {
+    text-decoration: none;
+    color: rgb(34, 40, 49);
+    font-size: 24px;
+}
+.post_date{
+    margin-bottom : 5px;
+}
+.button_new{
+    text-decoration: none;
+    color: rgb(34, 40, 49);
+    font-size: 30px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+a:visited { 
+    color: rgb(57, 62, 70); text-decoration: none;
+} 
+
+a:hover { color: rgb(0, 173, 181); text-decoration: none;}

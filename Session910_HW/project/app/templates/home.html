@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block title %}
+멋사투나잇
+{% endblock %}
+
+{% block content %}
+{% if not posts %}
+<p class="no_post">아직 글이 없습니다. 새로운 포스트를 작성해주세요!</p>
+{% endif %}
+{% for post in posts %}
+    <a class="post_title" href="{% url 'detail' post.pk %}">
+        {{ post.title }}
+    </a>
+    <div class="post_date">{{post.pub_date | date:"Y-m-d"}}</div>
+{% endfor %}
+    <div class="button_container">
+        <a class="button_new" href="{% url 'new' %}">글쓰기</a>
+    </div>
+{% endblock %}
