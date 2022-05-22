@@ -10,7 +10,7 @@ body .post_title {
     padding : 5px 0;
     border-bottom: 2px solid  rgb(57, 62, 70);
 }
-a {
+.post_title {
     text-decoration: none;
     color: rgb(34, 40, 49);
     font-size: 24px;

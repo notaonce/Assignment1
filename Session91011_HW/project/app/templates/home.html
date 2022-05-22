@@ -3,12 +3,11 @@
 {% block css %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
-
-{% endblock %}
+{% endblock css %}
 
 {% block title %}
 멋사투나잇
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
 {% if not posts %}
@@ -18,7 +17,7 @@
     <a class="post_title" href="{% url 'detail' post.pk %}">
         {{ post.title }}
     </a>
-    <div class="post_date">{{post.pub_date | date:"Y-m-d"}}</div>
+    <div class="post_date">{{post.pub_date | date:"Y-m-d"}} | {{post.author}}</div>
 {% endfor %}
     <div class="button_container">
         <a class="button_new" href="{% url 'new' %}">글쓰기</a>

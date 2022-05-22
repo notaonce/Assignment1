@@ -37,6 +37,9 @@
     color: rgb(34, 40, 49) ;
 }
 
+a {
+    text-decoration: none;
+}
 
 a:visited { 
     color: #EEEEEE;

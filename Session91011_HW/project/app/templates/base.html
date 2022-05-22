@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} {% load socialaccount %} {% providers_media_js %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    {% block css %}
+
+    {% endblock css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <title>한성수의 게시판</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="navbar_menu">
+            {% if user.is_authenticated %}
+            <span class="navbar_menu_item">{{user.username}}</span>
+            <li class="navbar_menu_item"><a href="{% url 'logout' %}">로그아웃</a></li>
+            {% else %}
+            <li class="navbar_menu_item"><a href="{% url 'login' %}">로그인</a></li>
+            <li class="navbar_menu_item"><a href="{% url 'signup' %}">회원가입</a></li>
+            <form
+                class="login" 
+                method="POST" 
+                action="{% provider_login_url 'kakao' %}">
+                {% csrf_token %} 
+                {{ form.as_p }} 
+                {% if redirect_field_value %}
+                <input
+                    type="hidden"
+                    name="{{ redirect_field_name }}"
+                    value="{{ redirect_field_value }}"
+                />
+                {% endif %}
+                <button class="primaryAction" type="submit">카카오 로그인</button>
+            </form>
+            {% endif %}        
+        </ul> 
+    </nav>
+    <div class="title">
+        {% block title %}
+
+        {% endblock title %}
+    </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>

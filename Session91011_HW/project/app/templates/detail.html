@@ -13,20 +13,23 @@
 {% block content %}
     <div class="post">
         <div id="post_title"> {{ post.title }} </div>
-        <div id="post_date"> {{ post.pub_date | date:"Y-m-d" }}</div>
+        <div id="post_date"> {{ post.pub_date | date:"Y-m-d" }} | {{post.author}}</div>
         <div id="post_content"> {{ post.content }} </div>
     </div>
     <div class="button_container">
+        {% if user.is_authenticated and post.author.pk == user.pk %}
         <a class="edit_button" href="{% url 'edit' post.pk %}">수정하기</a>
         <a class="delete_button" href="{% url 'delete' post.pk%}">삭제하기</a>
+        {% endif %}
         <a class="home_button" href="{% url 'home' %}">홈으로</a>
     </div>
     {% for comment in post.comments.all %}
     <div class="comment"> 
-        {{comment.content}} 
-        <a class='delete_comment' href="{% url 'delete_comment' post.pk comment.pk%}"> 삭제하기 </a> 
+        {{comment.content}} | {{comment.author}}
+        {% if user.is_authenticated and comment.author.pk == user.pk %}
+        |  <a class='delete_comment' href="{% url 'delete_comment' post.pk comment.pk%}"> 삭제하기 </a> 
     </div>
-    {% endfor %}
+    {% endif %}{% endfor %}
     <form method="POST">
         {% csrf_token %}
         <input type="text" name="content" placeholder="댓글 입력">

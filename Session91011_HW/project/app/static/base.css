@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding : 0;
+}
+
+body {
+    background-color: rgb(34, 40, 49);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+body .title {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 10vh;
+    color: #EEEEEE;
+    font-weight: 100;
+    text-align: center;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    background-color: rgb(34, 40, 49);
+    min-width: 250px;
+}
+
+body .container{
+    font-family: 'Nanum Gothic', sans-serif;
+    margin : 15vh auto;
+    box-sizing: border-box;
+    width: 75vw;
+    height: auto;
+    padding: 5vh 5vw;
+    background-color: #EEEEEE;
+    border: 10px solid rgb(57, 62, 70);
+    border-radius: 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+body .no_post {
+    text-align: center;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_menu {
+    display: flex;
+    padding-left: 0;
+    color: #EEEEEE;
+    text-align: center;
+    align-items: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar_menu .navbar_menu_item {
+    padding: 8px 16px;
+    margin: 0 4px;
+    color: #EEEEEE;
+    z-index: 10;
+    font-size : 20px;
+}
+
+.navbar_menu_item a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.navbar_menu_item a:visited { 
+text-decoration: none;
+} 
+
+.navbar_menu_item a:hover { color: rgb(0, 173, 181); text-decoration: none;}
+
+.primaryAction {
+    font-size : 20px;
+    background-color: #EEEEEE;
+    border : none;
+    margin-top : 4px;
+    padding : 2px;
+    border-radius: 2px;
+}
