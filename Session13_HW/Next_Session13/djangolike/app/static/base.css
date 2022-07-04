@@ -1,0 +1,29 @@
+.nav-bar {
+  width: 100%;
+  background-color: #ececec;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+* {
+  margin: 10px;
+  box-sizing: border-box;
+}

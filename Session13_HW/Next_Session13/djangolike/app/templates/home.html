@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %} {% for post in posts %}
+<div>
+  <ul>
+    <li>
+      <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+    </li>
+  </ul>
+</div>
+{% endfor %}
+<a href="{% url 'new' %}">글 쓰러가기</a>
+{% endblock content %}

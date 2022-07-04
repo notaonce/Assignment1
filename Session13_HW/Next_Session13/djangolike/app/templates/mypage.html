@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  좋아요
+  <div>
+    {% for like in likes %}
+      {% if not likes %}
+      <p>좋아요 누른 글만 표시합시다</p>
+      {% endif %}
+      <p>{{ like.post.title }}</p>
+    {% endfor %}
+  </div>
+</div>
+<div>
+  스크랩
+  <div>
+    {% for scrap in scraps %}
+      {% if not scraps %}
+      <p>스크랩한 글만 표시합시다</p>
+      {% endif %}
+      <p>{{ scrap.post.title }}</p>
+    {% endfor %}  </div>
+  {% endblock content %}
+</div>

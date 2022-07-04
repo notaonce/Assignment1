@@ -1,0 +1,85 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div>
+    <div class="post_title">{{ post.title }}</div>
+    <div class="post_content">{{ post.content }}</div>
+  </div>
+  <a href="{% url 'home' %}">홈으로</a>
+
+  {% if user.is_authenticated and post.author.pk == user.pk %}
+  <a href="{% url 'edit' post.pk %}">수정하기</a>
+  <a href="{% url 'delete' post.pk %}">삭제하기</a>
+  <div id="scraped">스크랩 {{post.scraps.count}}개</div>
+
+  {% endif %} {% for comment in post.comments.all %}
+  <li>{{ comment.content }}</li>
+  {% if user.is_authenticated and comment.author.pk == user.pk %}
+  <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+  {% endif %} {% endfor %} {% if user.is_authenticated %}
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="content" placeholder="댓글을 입력하세요" />
+    <button type="submit">댓글 쓰기</button>
+  </form>
+  <button id="like-button" onclick="like()">좋아요 {{post.likes.count}}개</button>
+  <button id="scrap-button" onclick="scrap()">스크랩</button>
+  {% endif %}
+  <div id="scraped" style="display: none;"></div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+  const like = () => {
+    axios('/like', {
+      method: "POST",
+      data: {post_pk : "{{post.pk}}"}
+    })
+    .then((response)=> {
+      document.getElementById("like-button").innerHTML="좋아요 "+response.data.like_count+"개"
+      if (response.data.liked > 0) { 
+        document.getElementById("like-button").style.color = "red"
+      } else {
+      document.getElementById("like-button").style.color = "black"
+      }}
+      )
+    }
+
+  
+  const scrap = () => {
+    axios('/scrap', {
+      method: "POST",
+      data: {post_pk : "{{post.pk}}"}
+    })
+    .then((response)=>       
+      { document.getElementById("scraped").innerHTML="스크랩 "+response.data.scrap_count+"개"
+        if (response.data.scraped > 0) { 
+        document.getElementById("scrap-button").style.color = "blue"
+      } else {
+      document.getElementById("scrap-button").style.color = "black"
+      }      
+    })}
+
+  const button_color = () => {
+    axios('/button', {
+      method: "POST",
+      data: {post_pk : "{{post.pk}}"}
+    })
+    .then((response) =>
+    {
+      if (response.data.liked > 0) { 
+        document.getElementById("like-button").style.color = "red"
+      } else {
+      document.getElementById("like-button").style.color = "black"
+      }
+
+      if (response.data.scraped > 0) { 
+        document.getElementById("scrap-button").style.color = "blue"
+      } else {
+      document.getElementById("scrap-button").style.color = "black"
+    }})}
+
+  window.onload=button_color()
+
+</script>
+{% endblock content %}
